@@ -797,10 +797,16 @@ function TenseQuest() {
                 onChange={(e) => setUserAnswer(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
                 disabled={showResult !== null}
-                placeholder={currentQuestion.type === 'rewrite' || currentQuestion.type === 'error' 
-                  ? "Type the complete corrected sentence..." 
-                  : "Type your answer..."}
-                className="w-full bg-purple-900 border border-purple-300 text-white rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-purple-400 placeholder-purple-300 disabled:opacity-50"
+                placeholder={
+                  currentQuestion.type === 'rewrite' || currentQuestion.type === 'error'
+                    ? "Type the complete corrected sentence..."
+                    : "Type your answer..."
+                }
+                className="w-full rounded-xl p-3 border text-base
+                  bg-white text-gray-900 border-purple-300
+                  placeholder-gray-400
+                  focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400
+                  disabled:bg-gray-100 disabled:text-gray-500 disabled:placeholder-gray-400 disabled:cursor-not-allowed"
                 autoComplete="off"
                 autoCapitalize="off"
               />
