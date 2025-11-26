@@ -800,7 +800,7 @@ function TenseQuest() {
                 placeholder={currentQuestion.type === 'rewrite' || currentQuestion.type === 'error' 
                   ? "Type the complete corrected sentence..." 
                   : "Type your answer..."}
-                className="w-full bg-white/10 border border-white/30 text-white rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-purple-400 placeholder-purple-300/50 disabled:opacity-50"
+                className="w-full bg-purple-900 border border-purple-300 text-white rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-purple-400 placeholder-purple-300 disabled:opacity-50"
                 autoComplete="off"
                 autoCapitalize="off"
               />
