@@ -900,13 +900,12 @@ function TenseQuest() {
   );
 }
 
-// Mount the app if a root element exists
-document.addEventListener('DOMContentLoaded', () => {
-  const rootElement = document.getElementById('root');
-  if (rootElement) {
-    const root = ReactDOM.createRoot
-      ? ReactDOM.createRoot(rootElement)
-      : ReactDOM.render && { render: (c) => ReactDOM.render(c, rootElement) };
-    root.render(<TenseQuest />);
+// Mount the app
+const rootElement = document.getElementById('root');
+if (rootElement && ReactDOM) {
+  if (ReactDOM.createRoot) {
+    ReactDOM.createRoot(rootElement).render(<TenseQuest />);
+  } else if (ReactDOM.render) {
+    ReactDOM.render(<TenseQuest />, rootElement);
   }
-});
+}
