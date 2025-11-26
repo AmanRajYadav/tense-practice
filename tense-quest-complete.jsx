@@ -802,11 +802,12 @@ function TenseQuest() {
                     ? "Type the complete corrected sentence..."
                     : "Type your answer..."
                 }
-                className="w-full rounded-xl p-3 border text-base
-                  bg-white text-gray-900 border-purple-300
-                  placeholder-gray-400
-                  focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400
-                  disabled:bg-gray-100 disabled:text-gray-500 disabled:placeholder-gray-400 disabled:cursor-not-allowed"
+                className="w-full rounded-xl p-3 border border-purple-300 text-base focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 disabled:cursor-not-allowed"
+                style={{
+                  backgroundColor: '#ffffff',
+                  color: '#000000',
+                  caretColor: '#000000'
+                }}
                 autoComplete="off"
                 autoCapitalize="off"
               />
